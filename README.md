@@ -3,6 +3,7 @@
 ## Candidate Information
 - Name: Mercyline Nyaboke
 - Course: Bachelor of Computer Science Third Year.
+- School: Masinde Muliro University of Science and technology
 
 ## Project Overview
 This project is a solution to the technical assessment provided by IntelliSOFT Consulting Limited.
