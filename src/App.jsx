@@ -18,8 +18,8 @@ function App() {
             <Route path="/" element={<PatientListing />} />
             <Route path="/patient-registration" element={<PatientDataState />} />
             <Route path="/patient-vitals" element={<PatientVitals />} />
-            {/* <Route path="/overweight" element={<OverweightAssessment />} />
-            <Route path="/general-assessment" element={<GeneralAssessment />} /> */}
+            <Route path="/overweight" element={<OverweightAssessment />} />
+            <Route path="/general-assessment" element={<GeneralAssessment />} /> 
           </Routes>
         </main>
 
