@@ -32,7 +32,7 @@ const OverweightAssessment = () => {
               type="text"
               value="Lynn Kagwi"
               disabled
-              className="border rounded-md px-4 py-3 bg-gray-100 text-white cursor-not-allowed"
+              className="border rounded-md px-4 py-3 bg-gray-100 text-black cursor-not-allowed"
             />
           </div>
 
