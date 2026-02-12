@@ -83,7 +83,7 @@ const PatientListing = () => {
             <thead>
               <tr className="border-b text-gray-600 text-lg font-semibold">
                 <th className="py-4">Patient Name</th>
-                <th>DOB</th>
+                <th>Date of Birth</th>
                 <th>BMI Status</th>
                 <th>Last Visit Date</th>
                 <th>Action</th>
