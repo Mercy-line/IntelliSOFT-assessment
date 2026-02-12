@@ -28,6 +28,8 @@ For this assessment, I adopted a **design-first, frontend-focused approach**.
 1. Clone the repository:
    ```bash
    git clone git@github.com:Mercy-line/IntelliSOFT-assessment.git
+
 ## Conclusion
 This project demonstrates my ability to understand requirements, design user interfaces, implement a modern frontend, and integrate backend APIs. 
 It reflects my problem-solving approach and attention to detail.
+Link for figma : https://www.figma.com/design/tDoFU72NkCgyKnUnGEbaWs/IntelliSOFT-practical?node-id=0-1&t=IMa9jsbQA8YStymb-1

@@ -13,8 +13,8 @@ export const dummyPatients:PatientWithId[] = [
 
    }, 
    {
-    id:2,
-   unique:"unique1",
+    id:1,
+   unique:"unique",
    firstname:"Mercyline",
    lastname:"Mokua",
    dob:"11-02-2010",
