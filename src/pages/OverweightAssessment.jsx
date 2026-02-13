@@ -1,20 +1,44 @@
+
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const OverweightAssessment = () => {
   const navigate = useNavigate();
 
+  // Form state for validation
+  const [generalHealth, setGeneralHealth] = useState("");
+  const [diet, setDiet] = useState("");
+  const [comments, setComments] = useState("");
+
+  const visitDate = new Date().toISOString().split("T")[0];
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    navigate("/"); 
+
+    // Validation
+    if (!generalHealth) {
+      alert("Please select General Health status!");
+      return;
+    }
+
+    if (!diet) {
+      alert("Please select if the patient is on a diet!");
+      return;
+    }
+
+    if (!comments.trim()) {
+      alert("Please fill in Comments!");
+      return;
+    }
+
+    // If all fields are valid, navigate to the next page
+    navigate("/");
   };
 
   const handleCancel = (e) => {
     e.preventDefault();
-    navigate("/patient-vitals"); 
+    navigate("/patient-vitals");
   };
-  const visitDate = new Date().toISOString().split('T')[0];
-
 
   return (
     <form onSubmit={handleSubmit}>
@@ -52,20 +76,28 @@ const OverweightAssessment = () => {
           {/* General Health */}
           <div className="flex flex-col gap-2">
             <label className="text-lg">General Health</label>
-            <select className="border rounded-md px-4 py-3">
+            <select
+              className="border rounded-md px-4 py-3"
+              value={generalHealth}
+              onChange={(e) => setGeneralHealth(e.target.value)}
+            >
               <option value="">Select health status of patient</option>
-              <option>Good</option>
-              <option>Poor</option>
+              <option value="Good">Good</option>
+              <option value="Poor">Poor</option>
             </select>
           </div>
 
           {/* Diet */}
           <div className="flex flex-col gap-2">
             <label className="text-lg">Is the patient on a diet?</label>
-            <select className="border rounded-md px-4 py-3">
+            <select
+              className="border rounded-md px-4 py-3"
+              value={diet}
+              onChange={(e) => setDiet(e.target.value)}
+            >
               <option value="">Select option</option>
-              <option>Yes</option>
-              <option>No</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
             </select>
           </div>
 
@@ -76,6 +108,8 @@ const OverweightAssessment = () => {
               rows="4"
               placeholder="Write observations about the patient"
               className="border rounded-md px-4 py-3"
+              value={comments}
+              onChange={(e) => setComments(e.target.value)}
             ></textarea>
           </div>
         </div>
@@ -90,7 +124,6 @@ const OverweightAssessment = () => {
           </button>
 
           <button
-          onClick={handleSubmit}
             type="submit"
             className="bg-blue-500 text-white px-10 py-4 rounded-lg"
           >
