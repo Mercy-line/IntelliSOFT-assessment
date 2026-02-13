@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const OverweightAssessment = () => {
   const navigate = useNavigate();
 
-  // Form state for validation
+  
   const [generalHealth, setGeneralHealth] = useState("");
   const [diet, setDiet] = useState("");
   const [comments, setComments] = useState("");
@@ -73,7 +73,7 @@ const OverweightAssessment = () => {
             />
           </div>
 
-          {/* General Health */}
+          {/* General Health  status*/}
           <div className="flex flex-col gap-2">
             <label className="text-lg">General Health</label>
             <select
@@ -87,7 +87,7 @@ const OverweightAssessment = () => {
             </select>
           </div>
 
-          {/* Diet */}
+          {/* Diet status*/}
           <div className="flex flex-col gap-2">
             <label className="text-lg">Is the patient on a diet?</label>
             <select
