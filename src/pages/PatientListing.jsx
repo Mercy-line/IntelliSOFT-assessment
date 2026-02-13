@@ -16,7 +16,7 @@ const PatientListing = () => {
   const [search, setSearch] = useState("");
   const [filterDate, setFilterDate] = useState("");
 
-  // Convert "dd/mm/yyyy" to "yyyy-mm-dd" for comparison with input[type=date]
+  
   const formatDate = (date) => {
     const [day, month, year] = date.split("/");
     return `${year}-${month}-${day}`;

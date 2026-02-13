@@ -1,9 +1,13 @@
+
 import InputField from "../components/InputField";
 import { usePatientData } from "../hooks/usePatientData";
 
 const PatientRegistration = ({ patientData }) => {
   const { handleCancel, handleSubmit, patient, handlePatientChange } =
     patientData;
+
+  // Get today's date in YYYY-MM-DD format
+  const todayStr = new Date().toISOString().split("T")[0];
 
   return (
     <form onSubmit={handleSubmit} className="p-6 font-serif">
@@ -13,6 +17,7 @@ const PatientRegistration = ({ patientData }) => {
       </p>
 
       <div className="grid grid-cols-2 gap-10">
+        {/* First Name */}
         <InputField
           label="First Name"
           name="firstname"
@@ -20,6 +25,8 @@ const PatientRegistration = ({ patientData }) => {
           value={patient.firstname}
           onChange={handlePatientChange}
         />
+
+        {/* Last Name */}
         <InputField
           label="Last Name"
           name="lastname"
@@ -28,6 +35,7 @@ const PatientRegistration = ({ patientData }) => {
           onChange={handlePatientChange}
         />
 
+        {/* Gender */}
         <div className="flex flex-col gap-2">
           <label className="text-lg">Gender</label>
           <select
@@ -42,13 +50,17 @@ const PatientRegistration = ({ patientData }) => {
           </select>
         </div>
 
+        {/* Date of Birth */}
         <InputField
           label="Date of Birth"
           type="date"
           name="dob"
           value={patient.dob}
           onChange={handlePatientChange}
+          max={todayStr} // Cannot select future dates
         />
+
+        {/* Patient Number */}
         <InputField
           label="Patient Number"
           name="unique"
@@ -56,15 +68,20 @@ const PatientRegistration = ({ patientData }) => {
           value={patient.unique}
           onChange={handlePatientChange}
         />
+
+        {/* Registration Date */}
         <InputField
           label="Registration Date"
           type="date"
           name="reg_date"
-          value={patient.reg_date}
+          value={todayStr} // default to today
           onChange={handlePatientChange}
+          min={todayStr} // cannot select past
+          max={todayStr} // cannot select future
         />
       </div>
 
+      {/* Buttons */}
       <div className="flex justify-between mt-16">
         <button
           type="button"

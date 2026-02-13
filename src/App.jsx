@@ -7,6 +7,8 @@ import OverweightAssessment from "./pages/OverweightAssessment";
 import GeneralAssessment from "./pages/GeneralAssessment";
 import PatientListing from "./pages/PatientListing";
 import PatientDataState from "./pages/PatientDataState";
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -15,7 +17,10 @@ function App() {
         <Header />
         <main className="flex-1 p-10">
           <Routes>
-            <Route path="/" element={<PatientListing />} />
+            <Route path="/" element={<Signup />}/>
+            <Route path="/login" element={<Login/>}/>
+            <Route path="/patient-listing" element={<PatientListing />} />
+            <Route path="/signup" element={<Signup/>}/>
             <Route path="/patient-registration" element={<PatientDataState />} />
             <Route path="/patient-vitals" element={<PatientVitals />} />
             <Route path="/overweight" element={<OverweightAssessment />} />

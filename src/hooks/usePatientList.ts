@@ -6,7 +6,7 @@ import { PatientWithId } from "../interfaces/patient";
 export const usePatientList = () =>{
 
 const baseUrl = import.meta.env.VITE_PUBLIC_API_URL;
-    const isDev = import.meta.env.VITE_PUBLIC_DEV_MODE;
+const isDev = import.meta.env.VITE_PUBLIC_DEV_MODE;
     const token = "uguwgcygge";
     const[patients,setPatients] = useState<PatientWithId[]>();
     const[ loading, setLoading] = useState<boolean>(false);

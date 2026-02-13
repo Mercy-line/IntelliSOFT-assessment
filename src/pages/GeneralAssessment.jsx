@@ -27,7 +27,7 @@ const GeneralAssessment = () => {
 
     
 
-    navigate("/"); 
+    navigate("/patient-listing"); 
   };
 
   const handleCancel = () => {
@@ -114,6 +114,7 @@ const GeneralAssessment = () => {
             onChange={(e) => setComments(e.target.value)}
             placeholder="Write comments concerning the patient"
             className="w-full border border-gray-300 rounded-lg px-5 py-4 resize-none focus:outline-none focus:ring-2 focus:ring-blue-400"
+            required
           ></textarea>
         </div>
 
