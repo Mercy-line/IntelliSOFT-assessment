@@ -57,7 +57,7 @@ const PatientRegistration = ({ patientData }) => {
           name="dob"
           value={patient.dob}
           onChange={handlePatientChange}
-          max={todayStr} // Cannot select future dates
+          max={todayStr} 
         />
 
         {/* Patient Number */}
@@ -74,10 +74,10 @@ const PatientRegistration = ({ patientData }) => {
           label="Registration Date"
           type="date"
           name="reg_date"
-          value={todayStr} // default to today
+          value={todayStr} 
           onChange={handlePatientChange}
-          min={todayStr} // cannot select past
-          max={todayStr} // cannot select future
+          min={todayStr} 
+          max={todayStr} 
         />
       </div>
 

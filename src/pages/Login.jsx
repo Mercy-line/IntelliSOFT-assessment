@@ -10,7 +10,7 @@ export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
 
   const handleLogin = () => {
-    // later you can add validation here
+   
 
     // navigate to patient listing page
     navigate("/patient-listing");

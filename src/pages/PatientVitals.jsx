@@ -5,7 +5,7 @@ const PatientVitals = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Get patient from navigation state
+  // Get patient from the  navigation state
   const patient = location.state?.patient;
 
   const [height, setHeight] = useState("");
@@ -36,7 +36,7 @@ const PatientVitals = () => {
 
     const category = getBMICategory();
 
-    // Navigate based on BMI
+    // Navigate based on BMI of the patient
     if (category === "Overweight") {
       navigate("/overweight", {
         state: { patient, bmi, category },
