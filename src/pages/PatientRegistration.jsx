@@ -12,7 +12,7 @@ const PatientRegistration = ({ patientData }) => {
   return (
     <form onSubmit={handleSubmit} className="p-6 font-serif">
       <h2 className="text-3xl font-bold mb-2">Patient Registration</h2>
-      <p className="text-gray-500 mb-10">
+      <p className="text-gray-500 mb-6">
         Please fill in the details of the patient
       </p>
 
@@ -86,14 +86,14 @@ const PatientRegistration = ({ patientData }) => {
         <button
           type="button"
           onClick={handleCancel}
-          className="bg-gray-400 text-white px-10 py-4 rounded-lg"
+          className="bg-gray-400 text-white px-10 py-4 rounded-lg hover:bg-blue-600 transition"
         >
           Cancel
         </button>
 
         <button
           type="submit"
-          className="bg-blue-500 text-white px-10 py-4 rounded-lg hover:bg-blue-600"
+          className="bg-blue-500 text-white px-10 py-4 rounded-lg hover:bg-blue-600 transition"
         >
           Submit
         </button>

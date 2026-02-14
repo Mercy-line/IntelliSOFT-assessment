@@ -55,7 +55,7 @@ const PatientVitals = () => {
         className="bg-white shadow-md rounded-lg p-10 max-w-5xl mx-auto"
       >
         <h2 className="text-3xl font-bold mb-2">Patient Vitals</h2>
-        <p className="text-gray-500 mb-10">
+        <p className="text-gray-500 mb-6">
           Please fill in the patient’s details
         </p>
 
@@ -67,7 +67,7 @@ const PatientVitals = () => {
               type="text"
               value="Lynn Kagwi"
               disabled
-              className="border rounded-md px-4 py-3 bg-blue-500 text-white cursor-not-allowed"
+              className="border rounded-md px-4 py-3 bg-grey-100 text-black cursor-not-allowed"
             />
           </div>
 

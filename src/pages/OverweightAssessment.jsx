@@ -118,14 +118,14 @@ const OverweightAssessment = () => {
         <div className="flex justify-between mt-20">
           <button
             onClick={handleCancel}
-            className="bg-gray-400 text-white px-10 py-4 rounded-lg"
+            className="bg-gray-400 text-white px-10 py-4 rounded-lg hover:bg-gray-500 transition"
           >
             Cancel
           </button>
 
           <button
             type="submit"
-            className="bg-blue-500 text-white px-10 py-4 rounded-lg"
+            className="bg-blue-500 text-white px-10 py-4 rounded-lg hover:bg-blue-600 transition"
           >
             Submit
           </button>
