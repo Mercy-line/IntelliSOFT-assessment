@@ -34,4 +34,4 @@ This project demonstrates my ability to understand requirements, design user int
 It reflects my problem-solving approach and attention to detail.
 Link for figma : https://www.figma.com/design/tDoFU72NkCgyKnUnGEbaWs/IntelliSOFT-practical?node-id=0-1&t=IMa9jsbQA8YStymb-1
 
-Deployment link: intelli-soft-assessment.vercel.app
+Hosted link: intelli-soft-assessment.vercel.app
