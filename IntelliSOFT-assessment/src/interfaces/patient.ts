@@ -1,5 +1,5 @@
 export interface Patient{
-    _id?: string, // Add _id for API consistency
+    _id?: string, 
     unique:string,
     firstname:string,
     lastname:string,
@@ -10,7 +10,7 @@ export interface Patient{
 }
 
 export interface PatientWithId extends Patient {
-    id:string // Change id to string, assuming it refers to _id
+    id:string 
 }
 
 export interface PatientNav extends Patient{
@@ -23,7 +23,7 @@ export interface Vitals {
     patientId: string;
     height: number; // in cm
     weight: number; // in kg
-    bmiStatus?: string; // auto-calculated
+    bmiStatus?: string; // auto calculated
     createdAt?: string;
     updatedAt?: string;
 }

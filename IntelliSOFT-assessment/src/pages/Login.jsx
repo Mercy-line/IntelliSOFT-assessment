@@ -25,7 +25,7 @@ export default function Login() {
       const response = await auth.login(formData);
       if (response.success && response.token) {
         localStorage.setItem("token", response.token);
-        // Assuming there's a user object in the response to store
+       
         if (response.user) {
           localStorage.setItem("user", JSON.stringify(response.user));
         }
