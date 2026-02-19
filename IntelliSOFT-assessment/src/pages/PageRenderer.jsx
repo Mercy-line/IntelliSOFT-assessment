@@ -7,6 +7,7 @@ import GeneralAssessment from './GeneralAssessment';
 
 const PageRenderer = () => {
   const { currentPage, patientData } = useContext(NavigationContext);
+  console.log('PageRenderer - Current Page:', currentPage);
 
   switch (currentPage) {
     case 'PatientRegistration':
@@ -14,9 +15,9 @@ const PageRenderer = () => {
     case 'PatientVitals':
       return <PatientVitals patient={patientData} />;
     case 'OverweightAssessment':
-      return <OverweightAssessment />;
+      return <OverweightAssessment patient={patientData} />;
     case 'GeneralAssessment':
-      return <GeneralAssessment />;
+      return <GeneralAssessment patient={patientData} />;
     default:
       return <PatientRegistration />;
   }

@@ -22,7 +22,7 @@ const VitalsSchema = new mongoose.Schema(
 
     bmiStatus: {
       type: String,
-      enum: ["Underweight", "Normal", "Overweight", "Obese"],
+      enum: ["Underweight", "Normal", "Overweight"],
       default: "Normal"
     },
 
@@ -46,8 +46,7 @@ VitalsSchema.pre("save", function (next) {
 
     if (bmi < 18.5) this.bmiStatus = "Underweight";
     else if (bmi >= 18.5 && bmi < 25) this.bmiStatus = "Normal";
-    else if (bmi >= 25 && bmi < 30) this.bmiStatus = "Overweight";
-    else this.bmiStatus = "Obese";
+    else this.bmiStatus = "Overweight";
   }
 
 });

@@ -213,6 +213,7 @@ export const usePatientData = () => {
     setPatientNav,
     patientVitals, // Return new state
     currentIndex,
+    setCurrentIndex,
     handlePatientChange,
     loading,
     error,

@@ -15,7 +15,7 @@ export const usePatientList = () =>{
             console.log("Fetched patients:", response.data);
             const data = response.data;
             setPatientsList(data);
-        }catch (e){
+        }catch (e:any){
             console.error("Failed to fetch patients:", e);
             setError(e.message || "An error occurred while fetching patients.");
         }finally{

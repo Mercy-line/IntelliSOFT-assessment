@@ -15,7 +15,12 @@ export default function PatientDataState() {
         <PatientRegistration patientData={patientData} />
       )}
 
-      {currentIndex === 1 && <PatientVitals patientData={patientData} />}
+      {/* {currentIndex === 1 && <PatientVitals patientData={patientData} />} */}
+
+      {currentIndex === 1 && (
+    
+        <PatientVitals patientData={patientData} setCurrentIndex={patientData.setCurrentIndex} />
+      )}
 
       {currentIndex === 2 && (
         <GeneralAssessment patientData={patientData} />

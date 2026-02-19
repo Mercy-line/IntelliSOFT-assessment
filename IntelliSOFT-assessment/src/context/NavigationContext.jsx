@@ -7,6 +7,7 @@ const NavigationProvider = ({ children }) => {
   const [patientData, setPatientData] = useState({});
 
   const navigateTo = (page, data) => {
+    console.log('Navigating to:', page, 'with data:', data);
     setCurrentPage(page);
     if (data) {
       setPatientData(data);

@@ -1,14 +1,14 @@
-import React, { useContext, useState } from 'react';
-import { NavigationContext } from '../context/NavigationContext';
-import { vitals } from '../services/api';
+import React, { useContext, useState } from "react";
+import { NavigationContext } from "../context/NavigationContext";
+import { vitals } from "../services/api";
 
 const PatientVitals = ({ patient }) => {
   const { navigateTo, setPatientData } = useContext(NavigationContext);
-  const [height, setHeight] = useState('');
-  const [weight, setWeight] = useState('');
+  const [height, setHeight] = useState("");
+  const [weight, setWeight] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const currentVisitDate = new Date().toISOString().split('T')[0];
+  const currentVisitDate = new Date().toISOString().split("T")[0];
 
   const calculateBMI = () => {
     if (!height || !weight) return null;
@@ -20,10 +20,10 @@ const PatientVitals = ({ patient }) => {
   const bmi = calculateBMI();
 
   const getBMICategory = () => {
-    if (!bmi) return '';
-    if (bmi < 18.5) return 'Underweight';
-    if (bmi < 25) return 'Normal';
-    return 'Overweight';
+    if (!bmi) return "";
+    if (bmi < 18.5) return "Underweight";
+    if (bmi < 25) return "Normal";
+    return "Overweight";
   };
 
   const handleSubmit = async (e) => {
@@ -32,7 +32,7 @@ const PatientVitals = ({ patient }) => {
     setError(null);
 
     if (!bmi) {
-      alert('Please enter valid height and weight to calculate BMI.');
+      alert("Please enter valid height and weight to calculate BMI.");
       setLoading(false);
       return;
     }
@@ -44,22 +44,28 @@ const PatientVitals = ({ patient }) => {
         weight: parseFloat(weight),
       };
 
-      const response = await vitals.create(vitalsData);
+      const res = await vitals.create(vitalsData);
+      const response = res.data;
+
 
       if (response && response.bmiStatus) {
-        alert('Vitals recorded successfully!');
+        alert(`Vitals recorded successfully!`);
         const category = response.bmiStatus;
 
-        if (category === 'Overweight') {
-          navigateTo('OverweightAssessment', patient);
+        setPatientData(patient);
+
+        if (category === "Overweight") {
+          navigateTo("OverweightAssessment", patient);
         } else {
-          navigateTo('GeneralAssessment', patient);
+          navigateTo("GeneralAssessment", patient);
         }
       } else {
-        setError(response?.message || 'Failed to record vitals.');
+        setError(response?.message || "Failed to record vitals.");
       }
     } catch (err) {
-      setError(err.message || 'An unexpected error occurred during vitals recording.');
+      setError(
+        err.message || "An unexpected error occurred during vitals recording.",
+      );
     } finally {
       setLoading(false);
     }
@@ -67,7 +73,7 @@ const PatientVitals = ({ patient }) => {
 
   const handleCancel = () => {
     setPatientData(patient);
-    navigateTo('PatientRegistration');
+    navigateTo("PatientRegistration");
   };
 
   return (
@@ -76,7 +82,9 @@ const PatientVitals = ({ patient }) => {
         onSubmit={handleSubmit}
         className="bg-white shadow-md rounded-lg p-10 max-w-5xl mx-auto"
       >
-        <h2 className="text-3xl font-bold mb-2 text-gray-700">Patient Vitals</h2>
+        <h2 className="text-3xl font-bold mb-2 text-gray-700">
+          Patient Vitals
+        </h2>
         <p className="text-gray-500 mb-6">
           Please fill in the patient’s details
         </p>
@@ -87,7 +95,7 @@ const PatientVitals = ({ patient }) => {
             <label className="text-lg">Patient</label>
             <input
               type="text"
-              value={patient ? `${patient.firstName} ${patient.lastName}` : ''}
+              value={patient ? `${patient.firstName} ${patient.lastName}` : ""}
               disabled
               className="border rounded-md px-4 py-3 bg-gray-100 text-black cursor-not-allowed"
             />
@@ -157,7 +165,7 @@ const PatientVitals = ({ patient }) => {
             disabled={loading}
             className="bg-blue-500 text-white px-10 py-4 rounded-lg hover:bg-blue-600 transition disabled:opacity-50"
           >
-            {loading ? 'Recording Vitals...' : 'Submit'}
+            {loading ? "Recording Vitals..." : "Submit"}
           </button>
         </div>
       </form>

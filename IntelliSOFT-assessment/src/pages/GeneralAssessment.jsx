@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { NavigationContext } from '../context/NavigationContext';
 import { assessments } from '../services/api';
 
-const GeneralAssessment = () => {
+const GeneralAssessment = ({ patient }) => {
   const { navigateTo } = useContext(NavigationContext);
   const navigate = useNavigate();
   const visitDate = new Date().toISOString().split('T')[0];
@@ -21,17 +21,20 @@ const GeneralAssessment = () => {
 
     try {
       const assessmentData = {
+        patientId: patient.patientId,
         healthStatus: generalHealth,
         onDrugs: drugStatus,
         onDiet: 'N/A',
         visitDate: visitDate,
       };
 
-      const response = await assessments.create(assessmentData);
+      const res= await assessments.create(assessmentData);
+      const response = res.data;
+
 
       if (response && response._id) {
         alert('Assessment recorded successfully!');
-        navigate('/patients');
+        navigate('/patient-listing');
       } else {
         setError(response?.message || 'Failed to record assessment.');
       }
@@ -67,7 +70,7 @@ const GeneralAssessment = () => {
             <label className="text-lg">Patient</label>
             <input
               type="text"
-              value=""
+              value={patient ? `${patient.firstName} ${patient.lastName}` : ''}
               disabled
               className="border rounded-md px-4 py-3 bg-gray-100 text-gray-600 cursor-not-allowed"
             />

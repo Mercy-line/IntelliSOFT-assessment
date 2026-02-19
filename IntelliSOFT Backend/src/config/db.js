@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 const ConnectToDB = async()=>{
     try {
         console.log("Attempting to connect to DB with URL:", process.env.MONGO_URL);

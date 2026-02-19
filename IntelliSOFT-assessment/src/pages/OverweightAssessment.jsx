@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { NavigationContext } from '../context/NavigationContext';
 import { assessments } from '../services/api';
 
-const OverweightAssessment = () => {
+const OverweightAssessment = ({ patient }) => {
   const { navigateTo } = useContext(NavigationContext);
   const navigate = useNavigate();
   const visitDate = new Date().toISOString().split('T')[0];
@@ -21,17 +21,20 @@ const OverweightAssessment = () => {
 
     try {
       const assessmentData = {
+        patientId: patient.patientId,
         healthStatus: generalHealth,
         onDiet: diet,
         onDrugs: 'N/A',
         visitDate: visitDate,
       };
 
-      const response = await assessments.create(assessmentData);
+      const res = await assessments.create(assessmentData);
+      const response = res.data;
+
 
       if (response && response._id) {
         alert('Assessment recorded successfully!');
-        navigate('/patients');
+        navigate('/patient-listing');
       } else {
         setError(response?.message || 'Failed to record assessment.');
       }
@@ -64,7 +67,7 @@ const OverweightAssessment = () => {
             <label className="text-lg">Patient</label>
             <input
               type="text"
-              value=""
+              value={patient ? `${patient.firstName} ${patient.lastName}` : ''}
               disabled
               className="border rounded-md px-4 py-3 bg-gray-100 text-black cursor-not-allowed"
             />
@@ -93,7 +96,7 @@ const OverweightAssessment = () => {
             >
               <option value="">Select health status of patient</option>
               <option value="Good">Good</option>
-              <option value="Poor">Poor</option>
+              <option value="Bad">Bad</option>
             </select>
           </div>
 
