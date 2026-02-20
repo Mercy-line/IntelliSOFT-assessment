@@ -52,10 +52,10 @@ const GeneralAssessment = ({ patient }) => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-10 font-serif">
+    <div className="min-h-screen bg-gray-100 p-4 sm:p-6 md:p-10 font-serif">
       <form
         onSubmit={handleSubmit}
-        className="bg-white shadow-md rounded-lg p-10 max-w-5xl mx-auto"
+        className="bg-white shadow-md rounded-lg p-4 sm:p-6 md:p-10 max-w-5xl mx-auto"
       >
         <h2 className="text-3xl font-bold mb-2 text-gray-700"> 
           General Assessment
@@ -140,7 +140,7 @@ const GeneralAssessment = ({ patient }) => {
           <button
             type="button"
             onClick={handleCancel}
-            className="w-full sm:w-auto bg-gray-400 text-white text-xl px-14 py-4 rounded-xl hover:bg-gray-500 transition"
+            className="w-full sm:w-auto bg-gray-400 text-white text-base sm:text-xl px-6 sm:px-14 py-3 sm:py-4 rounded-xl hover:bg-gray-500 transition"
           >
             Cancel
           </button>
@@ -148,7 +148,7 @@ const GeneralAssessment = ({ patient }) => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full sm:w-auto bg-blue-500 text-white text-xl px-16 py-4 rounded-xl hover:bg-blue-600 transition disabled:opacity-50"
+            className="w-full sm:w-auto bg-blue-500 text-white text-base sm:text-xl px-6 sm:px-14 py-3 sm:py-4 rounded-xl hover:bg-blue-600 transition disabled:opacity-50"
           >
             {loading ? 'Submitting...' : 'Submit'}
           </button>
