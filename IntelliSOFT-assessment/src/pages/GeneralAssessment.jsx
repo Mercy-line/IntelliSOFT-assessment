@@ -57,7 +57,7 @@ const GeneralAssessment = ({ patient }) => {
         onSubmit={handleSubmit}
         className="bg-white shadow-md rounded-lg p-10 max-w-5xl mx-auto"
       >
-        <h2 className="text-3xl font-bold mb-2 text-gray-700">
+        <h2 className="text-3xl font-bold mb-2 text-gray-700"> 
           General Assessment
         </h2>
         <p className="text-gray-500 mb-10">
@@ -65,7 +65,7 @@ const GeneralAssessment = ({ patient }) => {
         </p>
 
         {/* Patient Information */}
-        <div className="grid grid-cols-2 gap-10 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
           <div className="flex flex-col gap-2">
             <label className="text-lg">Patient</label>
             <input
@@ -136,11 +136,11 @@ const GeneralAssessment = ({ patient }) => {
         </div>
         {error && <p className="text-red-500 mt-4 text-center">{error}</p>}
         {/* Buttons */}
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col sm:flex-row gap-4 sm:justify-between items-center">
           <button
             type="button"
             onClick={handleCancel}
-            className="bg-gray-400 text-white text-xl px-14 py-4 rounded-xl hover:bg-gray-500 transition"
+            className="w-full sm:w-auto bg-gray-400 text-white text-xl px-14 py-4 rounded-xl hover:bg-gray-500 transition"
           >
             Cancel
           </button>
@@ -148,7 +148,7 @@ const GeneralAssessment = ({ patient }) => {
           <button
             type="submit"
             disabled={loading}
-            className="bg-blue-500 text-white text-xl px-16 py-4 rounded-xl hover:bg-blue-600 transition disabled:opacity-50"
+            className="w-full sm:w-auto bg-blue-500 text-white text-xl px-16 py-4 rounded-xl hover:bg-blue-600 transition disabled:opacity-50"
           >
             {loading ? 'Submitting...' : 'Submit'}
           </button>
