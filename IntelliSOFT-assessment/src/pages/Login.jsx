@@ -65,15 +65,15 @@ export default function Login() {
         isSuccess={toast.isSuccess}
         message={toast.message}
       />
-      <div className="min-h-screen font-serif bg-grey-100 flex flex-col items-center justify-center">
+      <div className="min-h-screen font-serif bg-grey-100 flex flex-col items-center justify-center px-4">
         <div className="flex flex-col items-center mb-50">
-          <MdLocalHospital className="text-black text-8xl" />
+          <MdLocalHospital className="text-black text-6xl md:text-8xl" />
           <h1 className="text-blue-500 font-semibold text-lg mt-2 mb-8">
             MOTHER KEVIN HOSPITAL
           </h1>
         </div>
 
-        <div className="bg-white shadow-lg rounded-xl p-12 w-[900px]">
+        <div className="bg-white shadow-lg rounded-xl p-6 md:p-12 w-full max-w-[900px]">
           <h2 className="text-3xl font-semibold mb-2 text-gray-700">Login</h2>
           <p className="text-gray-700 mb-8">
             Welcome back! Please fill in the details
@@ -126,7 +126,7 @@ export default function Login() {
             <button
               onClick={handleSubmit}
               disabled={loading}
-              className="bg-blue-500 text-white px-16 py-3 rounded-lg hover:bg-blue-600 disabled:opacity-50"
+              className="bg-blue-500 text-white px-16 py-3 rounded-lg w-full md:w-auto hover:bg-blue-600 disabled:opacity-50"
             >
               {loading ? "Logging In..." : "Login"}
             </button>
