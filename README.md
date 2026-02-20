@@ -43,10 +43,11 @@ It provides a **responsive user interface** for managing patient registration, v
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Clone the repository
 ```bash
 git clone git@github.com:Mercy-line/IntelliSOFT-assessment.git
 cd IntelliSOFT-assessment
 
+ 
