@@ -1,6 +1,5 @@
-# IntelliSOFT Assessment – IntelliMED Frontend
-
-IntelliMED is a modern **frontend web application** built with **React, TypeScript, and Tailwind CSS**.  
+# IntelliSOFT - Assessment
+IntelliSOFT is a modern **frontend web application** built with **React, javaScript, and Tailwind CSS**.  
 It provides a **responsive user interface** for managing patient registration, vitals, and assessment workflows, following clean UI/UX principles and modern frontend best practices.
 
 ---
@@ -22,14 +21,14 @@ It provides a **responsive user interface** for managing patient registration, v
 ---
 
 ## Features
-- Patient registration and management
+- Patient registration
 - Patient vitals recording (height, weight, BMI)
 - Automatic BMI categorization
 - General and overweight assessment workflows
 - Responsive design for mobile, tablet, and desktop
 - Component-based UI architecture
-- Clean navigation flow using React Router
-- Tailwind CSS utility-first styling
+- Clean navigation flow
+- Tailwind CSS utility first styling
 
 ---
 
@@ -37,7 +36,7 @@ It provides a **responsive user interface** for managing patient registration, v
 - **React.js** (Hooks & Functional Components)
 - **TypeScript**
 - **Tailwind CSS**
-- **Vite** (Fast development & HMR)
+- **Vite** 
 - **Figma** (UI/UX design)
 - **REST APIs** (Backend integration)
 - **Modern JavaScript (ESM)**
