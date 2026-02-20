@@ -52,7 +52,7 @@ const OverweightAssessment = ({ patient }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className='p-6 md:p-10 font-serif bg-white shadow-md rounded-lg max-w-4xl mx-auto'>
       <div className="mb-2 font-serif">
         <h2 className="text-3xl font-bold mb-2 text-gray-700">
           Overweight Assessment
@@ -61,7 +61,7 @@ const OverweightAssessment = ({ patient }) => {
           Review patient details and complete assessment
         </p>
 
-        <div className="grid grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {/* Patient Name */}
           <div className="flex flex-col gap-2">
             <label className="text-lg">Patient</label>
@@ -120,7 +120,7 @@ const OverweightAssessment = ({ patient }) => {
             <textarea
               rows="4"
               placeholder="Write observations about the patient"
-              className="border rounded-md px-4 py-3"
+              className="w-full border rounded-md px-4 py-3"
               value={comments}
               onChange={(e) => setComments(e.target.value)}
             ></textarea>
@@ -128,11 +128,11 @@ const OverweightAssessment = ({ patient }) => {
         </div>
         {error && <p className="text-red-500 mt-4 text-center">{error}</p>}
         {/* Buttons */}
-        <div className="flex justify-between mt-20">
+        <div className="flex flex-col sm:flex-row gap-4 sm:justify-between mt-10">
           <button
             onClick={handleCancel}
             type="button"
-            className="bg-gray-400 text-white px-10 py-4 rounded-lg hover:bg-gray-500 transition"
+            className="w-full sm:w-auto bg-gray-400 text-white px-10 py-4 rounded-lg hover:bg-gray-500 transition"
           >
             Cancel
           </button>
@@ -140,7 +140,7 @@ const OverweightAssessment = ({ patient }) => {
           <button
             type="submit"
             disabled={loading}
-            className="bg-blue-500 text-white px-10 py-4 rounded-lg hover:bg-blue-600 transition disabled:opacity-50"
+            className="w-full sm:w-auto bg-blue-500 text-white px-10 py-4 rounded-lg hover:bg-blue-600 transition disabled:opacity-50"
           >
             {loading ? 'Submitting...' : 'Submit'}
           </button>
