@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Patient, PatientNav } from "../interfaces/patient";
-import { patients } from "../services/api"; // Import the patients service
+import { Patient, PatientNav, Vitals } from "../interfaces/patient";
+import { patients, vitals } from "../services/api"; // Import the patients service
 
 export const usePatientData = () => {
   const navigate = useNavigate();
