@@ -50,4 +50,51 @@ It provides a **responsive user interface** for managing patient registration, v
 git clone git@github.com:Mercy-line/IntelliSOFT-assessment.git
 cd IntelliSOFT-assessment
 
- 
+ ### Install Dependancies
+ npm install
+# or
+yarn install
+
+### Start the development server
+npm run dev
+Runs locally at: http://localhost:3000
+
+### Build for production
+npm run build
+
+### Preview production build
+npm run preview
+
+### Project structure
+src/
+ ├─ components/
+ ├─ pages/
+ │   ├─ PatientRegistration.jsx
+ │   ├─ PatientVitals.jsx
+ │   ├─ GeneralAssessment.jsx
+ │   ├─ OverweightAssessment.jsx
+ │   └─ PatientListing.jsx
+ ├─ context/
+ ├─ hooks/
+ ├─ services/
+ ├─ App.jsx
+ ├─ main.jsx
+ └─ index.css
+
+### Contributing
+1. Fork the repository
+2. create a feature branch
+   git checkout -b feat/your-feature
+3. Commit changes
+    git commit -m "Add new feature"
+4. Push to your branch and open a Pull Request
+
+### Conclusion
+This Project demonstrates my ability to:
+
+1.Translate requirements into usable interfaces
+2.Design clean and responsive UIs
+3.Build scalable frontend architectures
+4.Integrate APIs and manage application state
+
+It reflects both technical competence and attention to detail in frontend development.
