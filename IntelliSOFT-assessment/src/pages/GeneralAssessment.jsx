@@ -52,20 +52,20 @@ const GeneralAssessment = ({ patient }) => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-4 sm:p-6 md:p-10 font-serif">
+    <div className="min-h-screen bg-white sm:bg-gray-100 p-4 sm:p-6 md:p-10 font-serif">
       <form
         onSubmit={handleSubmit}
-        className="bg-white shadow-md rounded-lg p-4 sm:p-6 md:p-10 max-w-5xl mx-auto"
+        className="bg-white sm:shadow-md sm:rounded-lg p-4 sm:p-6 md:p-10 max-w-5xl mx-auto"
       >
-        <h2 className="text-3xl font-bold mb-2 text-gray-700"> 
+        <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-gray-700"> 
           General Assessment
         </h2>
-        <p className="text-gray-500 mb-10">
+        <p className="text-gray-500 mb-6 sm:mb-10">
           Review patient details and complete assessment
         </p>
 
         {/* Patient Information */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           <div className="flex flex-col gap-2">
             <label className="text-lg">Patient</label>
             <input
@@ -126,7 +126,7 @@ const GeneralAssessment = ({ patient }) => {
         <div className="mb-12">
           <label className="text-lg mb-2 block">Comments</label>
           <textarea
-            rows="6"
+            rows="4"
             value={comments}
             onChange={(e) => setComments(e.target.value)}
             placeholder="Write comments concerning the patient"
