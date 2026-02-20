@@ -39,19 +39,19 @@ export default function Signup() {
   };
 
   return (
-    <div className="min-h-screen font-serif bg-gray-100 flex flex-col items-center justify-center">
-      <div className="flex flex-col items-center mb-12">
-        <MdLocalHospital className="text-black text-8xl" />
-        <h1 className="text-blue-500 font-semibold text-lg mt-2">
+    <div className="min-h-screen font-serif bg-gray-100 flex flex-col items-center justify-center px-4">
+      <div className="flex flex-col items-center mb-8">
+        <MdLocalHospital className="text-black text-6xl md:text-8xl" />
+        <h1 className="text-blue-500 font-semibold text-base md:text-lg mt-2 text-center">
           MOTHER KEVIN HOSPITAL
         </h1>
       </div>
 
-      <div className="bg-white shadow-lg rounded-xl p-10 w-[900px]">
-        <h2 className="text-3xl font-semibold mb-2 text-gray-700">Signup</h2>
-        <p className="mb-8 text-gray-700">Please fill in the details</p>
+      <div className="bg-white shadow-lg rounded-xl p-6 md:p-10 w-full max-w-4xl">
+        <h2 className="text-2xl md:text-3xl font-semibold mb-2 text-gray-700">Signup</h2>
+        <p className="mb-6 md:mb-8 text-gray-700">Please fill in the details</p>
 
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label className="block mb-2 font-medium">First Name</label>
             <input
@@ -78,7 +78,7 @@ export default function Signup() {
           </div>
 
           <div>
-            <label className="block mb-2 text-lg font-medium">
+            <label className="block mb-2 font-medium">
               Email Address
             </label>
             <input
@@ -112,7 +112,7 @@ export default function Signup() {
               ) : (
                 <FaEyeSlash
                   onClick={() => setShowPassword(true)}
-                  className="absolute right-3 top-4 cursor-pointer text-gray-500"
+                  className="absolute right-3 top-3.5 cursor-pointer text-gray-500"
                   title="Show password"
                 />
               )}
@@ -124,7 +124,7 @@ export default function Signup() {
           <button
             onClick={handleSubmit}
             disabled={loading}
-            className="bg-blue-500 text-white px-10 py-3 rounded-lg hover:bg-blue-600 disabled:opacity-50"
+            className="w-full md:w-auto bg-blue-500 text-white px-12 py-3 rounded-lg hover:bg-blue-600 disabled:opacity-50"
           >
             {loading ? "Signing Up..." : "Sign Up"}
           </button>
