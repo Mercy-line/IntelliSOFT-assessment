@@ -1,37 +1,53 @@
-# IntelliSOFT Technical Assessment
+# IntelliSOFT Assessment – IntelliMED Frontend
 
-## Candidate Information
-- Name: Mercyline Nyaboke
-- Course: Bachelor of Computer Science Third Year.
-- School: Masinde Muliro University of Science and technology
+IntelliMED is a modern **frontend web application** built with **React, TypeScript, and Tailwind CSS**.  
+It provides a **responsive user interface** for managing patient registration, vitals, and assessment workflows, following clean UI/UX principles and modern frontend best practices.
+
+---
+
+##  Candidate Information
+- **Name:** Mercyline Nyaboke  
+- **Course:** Bachelor of Computer Science (Third Year)  
+- **Institution:** Masinde Muliro University of Science and Technology  
+
+---
 
 ## Project Links
-Link for figma : https://www.figma.com/design/tDoFU72NkCgyKnUnGEbaWs/IntelliSOFT-practical?node-id=0-1&t=IMa9jsbQA8YStymb-1
+- **Figma Design:**  
+  https://www.figma.com/design/tDoFU72NkCgyKnUnGEbaWs/IntelliSOFT-practical?node-id=0-1&t=IMa9jsbQA8YStymb-1  
 
-Hosted link: [intelli-soft-assessment.vercel.app](https://vercel.com/mercyline-nyaboke-mokuas-projects/intelli-soft-assessment)
+- **Hosted Application:**  
+  https://intelli-soft-assessment.vercel.app  
 
-## Approach Taken
-For this assessment, I adopted a **design-first, frontend-focused approach**.
+---
 
-1. Read and understood the documentation.
-2. Designed UI in **Figma**.
-3. Implemented frontend with **React.js + TypeScript + Tailwind CSS**.
-4. Consumed backend endpoints for dynamic data.
-5. Tested, refined, and ensured responsiveness.
+## Features
+- Patient registration and management
+- Patient vitals recording (height, weight, BMI)
+- Automatic BMI categorization
+- General and overweight assessment workflows
+- Responsive design for mobile, tablet, and desktop
+- Component-based UI architecture
+- Clean navigation flow using React Router
+- Tailwind CSS utility-first styling
 
-## Technologies Used
-- React.js
-- TypeScript
-- Tailwind CSS
-- Figma
-- REST APIs
+---
 
-## Setup Instructions
-1. Clone the repository:
-   ```bash
-   git clone git@github.com:Mercy-line/IntelliSOFT-assessment.git
+## Technology Stack
+- **React.js** (Hooks & Functional Components)
+- **TypeScript**
+- **Tailwind CSS**
+- **Vite** (Fast development & HMR)
+- **Figma** (UI/UX design)
+- **REST APIs** (Backend integration)
+- **Modern JavaScript (ESM)**
 
-## Conclusion
-This project demonstrates my ability to understand requirements, design user interfaces, implement a modern frontend, and integrate backend APIs. 
-It reflects my problem-solving approach and attention to detail.
+---
+
+## 🚀 Getting Started
+
+### Clone the repository
+```bash
+git clone git@github.com:Mercy-line/IntelliSOFT-assessment.git
+cd IntelliSOFT-assessment
 
