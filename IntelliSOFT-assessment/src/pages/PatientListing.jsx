@@ -116,7 +116,7 @@ const PatientListing = () => {
 
         {/* Table */}
         <div className="bg-white shadow rounded-md p-4 overflow-x-auto">
-          <table className="w-full min-w[900px]">
+          <table className="w-full min-w-[900px]">
             <thead>
               <tr className="border-b text-left text-gray-600 text-lg">
                 <th className="py-4">Patient Number</th>
@@ -150,7 +150,8 @@ const PatientListing = () => {
 
                     <td>{formatDate(patient.updatedAt)}</td>
 
-                    <td className="text-center flex flex-wrap gap-2 justify-center">
+                    <td className="text-center">
+                      <div className="flex flex-wrap gap-2 justify-center">
                       <button
                         onClick={() => handleAddVitals(patient)}
                         className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
@@ -159,16 +160,17 @@ const PatientListing = () => {
                       </button>
                       <button
                         onClick={() => handleEdit(patient)}
-                        className="bg-yellow-500 text-white px-4 py-2 rounded-lg hover:bg-yellow-600 ml-2"
+                        className="bg-yellow-500 text-white px-4 py-2 rounded-lg hover:bg-yellow-600"
                       >
                         Edit
                       </button>
                       <button
                         onClick={() => handleDelete(patient._id)}
-                        className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 ml-2"
+                        className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600"
                       >
                         Delete
                       </button>
+                      </div>
                     </td>
                   </tr>
                 ))
