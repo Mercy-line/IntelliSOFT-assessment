@@ -74,13 +74,13 @@ const PatientListing = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 font-serif">
-      <div className="px-8 py-10">
+      <div className="px-4 sm:px-8 sm:py-10">
         <h2 className="text-3xl font-semibold mb-6 text-gray-700">
           Patients List
         </h2>
 
         {/* Filters */}
-        <div className="flex gap-4 mb-6 items-end">
+        <div className="flex flex-wrap gap-4 mb-6 items-end">
           <div>
             <label className="block mb-1 text-gray-600 font-medium">
               Search (Name / Patient Number)
@@ -90,7 +90,7 @@ const PatientListing = () => {
               placeholder="Enter name or patient number"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="border rounded-md px-4 py-2 w-64"
+              className="border rounded-md px-4 py-2 w-full sm:w-64"
             />
           </div>
 
@@ -115,8 +115,8 @@ const PatientListing = () => {
         </div>
 
         {/* Table */}
-        <div className="bg-white shadow rounded-md p-4">
-          <table className="w-full">
+        <div className="bg-white shadow rounded-md p-4 overflow-x-auto">
+          <table className="w-full min-w[900px]">
             <thead>
               <tr className="border-b text-left text-gray-600 text-lg">
                 <th className="py-4">Patient Number</th>
@@ -150,7 +150,7 @@ const PatientListing = () => {
 
                     <td>{formatDate(patient.updatedAt)}</td>
 
-                    <td className="text-center">
+                    <td className="text-center flex flex-wrap gap-2 justify-center">
                       <button
                         onClick={() => handleAddVitals(patient)}
                         className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
