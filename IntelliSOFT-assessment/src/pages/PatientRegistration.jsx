@@ -59,13 +59,13 @@ const PatientRegistration = () => {
   const todayStr = new Date().toISOString().split('T')[0];
 
   return (
-    <form onSubmit={handleSubmit} className="p-6 font-serif">
+    <form onSubmit={handleSubmit} className="p-4 sm:p-6 font-serif max-w-4xl mx-auto">
       <h2 className="text-3xl font-bold mb-2 text-gray-700">Patient Registration</h2>
       <p className="text-gray-500 mb-6">
         Please fill in the details of the patient
       </p>
 
-      <div className="grid grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
         {/* First Name */}
         <InputField
           label="First Name"
@@ -122,11 +122,11 @@ const PatientRegistration = () => {
       </div>
       {error && <p className="text-red-500 mt-4 text-center">{error}</p>}
       {/* Buttons */}
-      <div className="flex justify-between mt-16">
+      <div className="flex flex-col sm:flex-row gap-4 sm:justify-between mt-10">
         <button
           type="button"
           onClick={handleCancel}
-          className="bg-gray-400 text-white px-10 py-4 rounded-lg hover:bg-gray-500 transition"
+          className="bg-gray-400 text-white px-10 py-4 rounded-lg w-full sm:w-auto hover:bg-gray-500 transition"
         >
           Cancel
         </button>
@@ -134,7 +134,7 @@ const PatientRegistration = () => {
         <button
           type="submit"
           disabled={loading}
-          className="bg-blue-500 text-white px-10 py-4 rounded-lg hover:bg-blue-600 transition disabled:opacity-50"
+          className="bg-blue-500 text-white px-10 py-4 rounded-lg w-full sm:w-auto hover:bg-blue-600 transition disabled:opacity-50"
         >
           {loading ? 'Registering...' : 'Submit'}
         </button>
