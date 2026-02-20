@@ -77,10 +77,10 @@ const PatientVitals = ({ patient }) => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-10 font-serif">
+    <div className="min-h-screen bg-gray-100 p-4 sm:p-6 md:p-10 font-serif">
       <form
         onSubmit={handleSubmit}
-        className="bg-white shadow-md rounded-lg p-10 max-w-5xl mx-auto"
+        className="bg-white shadow-md rounded-lg p-4 sm:p-6 md:p-10 max-w-5xl mx-auto"
       >
         <h2 className="text-3xl font-bold mb-2 text-gray-700">
           Patient Vitals
@@ -89,7 +89,7 @@ const PatientVitals = ({ patient }) => {
           Please fill in the patient’s details
         </p>
 
-        <div className="grid grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
           {/* Patient Name */}
           <div className="flex flex-col gap-2">
             <label className="text-lg">Patient</label>
@@ -140,7 +140,7 @@ const PatientVitals = ({ patient }) => {
         {/* BMI Result */}
         {bmi && (
           <div className="mt-16 flex justify-center">
-            <div className="bg-blue-500 text-white px-16 py-8 rounded-xl text-center shadow-lg">
+            <div className="bg-blue-500 text-white px-6 sm:px-10 md:px-16 py-6 md:py-8 rounded-xl text-center shadow-lg">
               <p className="text-lg">The BMI of the patient is</p>
               <h3 className="text-4xl font-bold">{bmi}</h3>
               <p className="text-xl">{getBMICategory()}</p>
@@ -151,11 +151,11 @@ const PatientVitals = ({ patient }) => {
         {error && <p className="text-red-500 mt-4 text-center">{error}</p>}
 
         {/* Buttons */}
-        <div className="flex justify-between mt-20">
+        <div className="flex flex-col sm:flex-row gap-4 sm:justify-between mt-10 md:mt-20">
           <button
             type="button"
             onClick={handleCancel}
-            className="bg-gray-400 text-white px-10 py-4 rounded-lg hover:bg-gray-500 transition"
+            className="bg-gray-400 text-white w-full sm:w-auto px-10 py-4 rounded-lg hover:bg-gray-500 transition"
           >
             Cancel
           </button>
@@ -163,7 +163,7 @@ const PatientVitals = ({ patient }) => {
           <button
             type="submit"
             disabled={loading}
-            className="bg-blue-500 text-white px-10 py-4 rounded-lg hover:bg-blue-600 transition disabled:opacity-50"
+            className="bg-blue-500 text-white w-full sm:w-auto px-10 py-4 rounded-lg hover:bg-blue-600 transition disabled:opacity-50"
           >
             {loading ? "Recording Vitals..." : "Submit"}
           </button>
