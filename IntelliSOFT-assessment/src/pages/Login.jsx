@@ -65,8 +65,8 @@ export default function Login() {
         isSuccess={toast.isSuccess}
         message={toast.message}
       />
-      <div className="min-h-screen font-serif bg-grey-100 flex flex-col items-center justify-center px-4">
-        <div className="flex flex-col items-center mb-50">
+      <div className="min-h-screen font-serif bg-gray-100 flex flex-col items-center justify-center px-4">
+        <div className="flex flex-col items-center mb-6 md:mb-12">
           <MdLocalHospital className="text-black text-6xl md:text-8xl" />
           <h1 className="text-blue-500 font-semibold text-lg mt-2 mb-8">
             MOTHER KEVIN HOSPITAL
@@ -80,7 +80,7 @@ export default function Login() {
           </p>
 
           <div className="mb-6">
-            <label className="block mb-2 text-lg font-medium">
+            <label className="block mb-2 text-base md:text-lg font-medium">
               Email Address
             </label>
             <input
@@ -126,7 +126,7 @@ export default function Login() {
             <button
               onClick={handleSubmit}
               disabled={loading}
-              className="bg-blue-500 text-white px-16 py-3 rounded-lg w-full md:w-auto hover:bg-blue-600 disabled:opacity-50"
+              className="bg-blue-500 text-white px-8 md:px-16 py-3 rounded-lg w-full md:w-auto hover:bg-blue-600 disabled:opacity-50"
             >
               {loading ? "Logging In..." : "Login"}
             </button>
