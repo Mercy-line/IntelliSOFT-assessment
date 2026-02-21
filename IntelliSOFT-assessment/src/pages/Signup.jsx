@@ -39,10 +39,10 @@ export default function Signup() {
   };
 
   return (
-    <div className="min-h-screen font-serif bg-white sm:bg-gray-100 flex flex-col items-center sm:justify-center px-0 sm:px-4">
+    <div className="min-h-screen font-serif bg-white sm:bg-gray-100 flex flex-col sm:justify-center px-0 sm:px-4">
       
 
-      <div className="bg-white sm:shadow-lg sm:rounded-xl p-4 sm:p-6 md:p-10 w-full min-h-screen sm:min-h-0 sm:max-w-4xl">
+      <div className="bg-white sm:shadow-lg sm:rounded-xl p-4 sm:p-6 md:p-10 w-full flex-1 min-h-screen sm:min-h-0 sm:max-w-4xl">
         <div className="flex flex-col items-center mb-8">
         <MdLocalHospital className="text-black text-6xl md:text-8xl" />
         <h1 className="text-blue-500 font-semibold text-base md:text-lg mt-2 text-center">
