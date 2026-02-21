@@ -39,15 +39,16 @@ export default function Signup() {
   };
 
   return (
-    <div className="min-h-screen font-serif bg-gray-100 flex flex-col items-center sm:justify-center px-0 sm:px-4">
-      <div className="flex flex-col items-center mb-8">
+    <div className="min-h-screen font-serif bg-white sm:bg-gray-100 flex flex-col items-center sm:justify-center px-0 sm:px-4">
+      
+
+      <div className="bg-white sm:shadow-lg sm:rounded-xl p-4 sm:p-6 md:p-10 w-full min-h-screen sm:min-h-0 sm:max-w-4xl">
+        <div className="flex flex-col items-center mb-8">
         <MdLocalHospital className="text-black text-6xl md:text-8xl" />
         <h1 className="text-blue-500 font-semibold text-base md:text-lg mt-2 text-center">
           MOTHER KEVIN HOSPITAL
         </h1>
       </div>
-
-      <div className="bg-white sm:shadow-lg sm:rounded-xl p-4 sm:p-6 md:p-10 w-full min-h-screen sm:min-h-0 sm:max-w-4xl">
         <h2 className="text-2xl md:text-3xl font-semibold mb-2 text-gray-700">Signup</h2>
         <p className="mb-6 md:mb-8 text-gray-700">Please fill in the details</p>
 
