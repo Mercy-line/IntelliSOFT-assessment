@@ -39,7 +39,8 @@ export default function Signup() {
   };
 
   return (
-    <div className="min-h-screen font-serif bg-gray-100 flex flex-col items-center justify-center px-0 sm:px-4">
+    // <div className="min-h-screen font-serif bg-gray-100 flex flex-col items-center justify-center px-0 sm:px-4">
+    <div>
       <div className="flex flex-col items-center mb-8">
         <MdLocalHospital className="text-black text-6xl md:text-8xl" />
         <h1 className="text-blue-500 font-semibold text-base md:text-lg mt-2 text-center">
